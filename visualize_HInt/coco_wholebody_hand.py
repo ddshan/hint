@@ -1,0 +1,158 @@
+thumb_color = (253, 235, 10)# [255, 213, 0]# [255, 165, 0]#, [255, 128, 0] orange
+fore_color = (255, 0, 212)#, [255, 106, 135] # [255, 153, 255] pink
+mid_color = (3, 66, 223) #[0, 19, 247] #[0, 92, 255] #[102, 178, 255] blue
+ring_color = (253, 48, 0) #[255, 22, 28] # [255, 51, 51] red
+pinky_color =  (99, 195, 40)#(157, 248, 6)# [41, 227, 5]#[99, 195, 40] # [0, 255, 0] green
+
+dataset_info = dict(
+    dataset_name='coco_wholebody_hand',
+    paper_info=dict(
+        author='Jin, Sheng and Xu, Lumin and Xu, Jin and '
+        'Wang, Can and Liu, Wentao and '
+        'Qian, Chen and Ouyang, Wanli and Luo, Ping',
+        title='Whole-Body Human Pose Estimation in the Wild',
+        container='Proceedings of the European '
+        'Conference on Computer Vision (ECCV)',
+        year='2020',
+        homepage='https://github.com/jin-s13/COCO-WholeBody/',
+    ),
+    # thumb_color = [255, 165, 0],
+    # fore_color = (),
+    # mid_color = (),
+    # ring_color = (),
+    # little_color = (),
+    keypoint_info={
+        0:
+        dict(name='wrist', id=0, color=[255, 255, 255], type='', swap=''),
+        1:
+        dict(name='thumb1', id=1, color=thumb_color, type='', swap=''),
+        2:
+        dict(name='thumb2', id=2, color=thumb_color, type='', swap=''),
+        3:
+        dict(name='thumb3', id=3, color=thumb_color, type='', swap=''),
+        4:
+        dict(name='thumb4', id=4, color=thumb_color, type='', swap=''),
+        5:
+        dict(
+            name='forefinger1', id=5, color=fore_color, type='', swap=''),
+        6:
+        dict(
+            name='forefinger2', id=6, color=fore_color, type='', swap=''),
+        7:
+        dict(
+            name='forefinger3', id=7, color=fore_color, type='', swap=''),
+        8:
+        dict(
+            name='forefinger4', id=8, color=fore_color, type='', swap=''),
+        9:
+        dict(
+            name='middle_finger1',
+            id=9,
+            color=mid_color,
+            type='',
+            swap=''),
+        10:
+        dict(
+            name='middle_finger2',
+            id=10,
+            color=mid_color,
+            type='',
+            swap=''),
+        11:
+        dict(
+            name='middle_finger3',
+            id=11,
+            color=mid_color,
+            type='',
+            swap=''),
+        12:
+        dict(
+            name='middle_finger4',
+            id=12,
+            color=mid_color,
+            type='',
+            swap=''),
+        13:
+        dict(
+            name='ring_finger1', id=13, color=ring_color, type='', swap=''),
+        14:
+        dict(
+            name='ring_finger2', id=14, color=ring_color, type='', swap=''),
+        15:
+        dict(
+            name='ring_finger3', id=15, color=ring_color, type='', swap=''),
+        16:
+        dict(
+            name='ring_finger4', id=16, color=ring_color, type='', swap=''),
+        17:
+        dict(name='pinky_finger1', id=17, color=pinky_color, type='', swap=''),
+        18:
+        dict(name='pinky_finger2', id=18, color=pinky_color, type='', swap=''),
+        19:
+        dict(name='pinky_finger3', id=19, color=pinky_color, type='', swap=''),
+        20:
+        dict(name='pinky_finger4', id=20, color=pinky_color, type='', swap='')
+    },
+    skeleton_info={
+        0:
+        dict(link=('wrist', 'thumb1'), id=0, color=thumb_color),
+        1:
+        dict(link=('thumb1', 'thumb2'), id=1, color=thumb_color),
+        2:
+        dict(link=('thumb2', 'thumb3'), id=2, color=thumb_color),
+        3:
+        dict(link=('thumb3', 'thumb4'), id=3, color=thumb_color),
+        4:
+        dict(link=('wrist', 'forefinger1'), id=4, color=fore_color),
+        5:
+        dict(link=('forefinger1', 'forefinger2'), id=5, color=fore_color),
+        6:
+        dict(link=('forefinger2', 'forefinger3'), id=6, color=fore_color),
+        7:
+        dict(link=('forefinger3', 'forefinger4'), id=7, color=fore_color),
+        8:
+        dict(link=('wrist', 'middle_finger1'), id=8, color=mid_color),
+        9:
+        dict(
+            link=('middle_finger1', 'middle_finger2'),
+            id=9,
+            color=mid_color),
+        10:
+        dict(
+            link=('middle_finger2', 'middle_finger3'),
+            id=10,
+            color=mid_color),
+        11:
+        dict(
+            link=('middle_finger3', 'middle_finger4'),
+            id=11,
+            color=mid_color),
+        12:
+        dict(link=('wrist', 'ring_finger1'), id=12, color=ring_color),
+        13:
+        dict(
+            link=('ring_finger1', 'ring_finger2'), id=13, color=ring_color),
+        14:
+        dict(
+            link=('ring_finger2', 'ring_finger3'), id=14, color=ring_color),
+        15:
+        dict(
+            link=('ring_finger3', 'ring_finger4'), id=15, color=ring_color),
+        16:
+        dict(link=('wrist', 'pinky_finger1'), id=16, color=pinky_color),
+        17:
+        dict(
+            link=('pinky_finger1', 'pinky_finger2'), id=17, color=pinky_color),
+        18:
+        dict(
+            link=('pinky_finger2', 'pinky_finger3'), id=18, color=pinky_color),
+        19:
+        dict(
+            link=('pinky_finger3', 'pinky_finger4'), id=19, color=pinky_color)
+    },
+    joint_weights=[1.] * 21,
+    sigmas=[
+        0.029, 0.022, 0.035, 0.037, 0.047, 0.026, 0.025, 0.024, 0.035, 0.018,
+        0.024, 0.022, 0.026, 0.017, 0.021, 0.021, 0.032, 0.02, 0.019, 0.022,
+        0.031
+    ])
